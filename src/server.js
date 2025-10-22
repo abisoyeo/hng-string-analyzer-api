@@ -9,6 +9,7 @@ import { connectToMongoDB } from "./config/db.js";
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
+app.set("trust proxy", 1);
 
 app.use(limiter);
 app.use("/strings", stringRouter);
