@@ -3,7 +3,8 @@ import crypto from "crypto";
 export function analyzeString(str) {
   if (typeof str !== "string") throw new Error("Value must be a string");
 
-  const length = value.length;
+  const length = str.length;
+
   const value = str.trim();
   const is_palindrome =
     value.toLowerCase() === value.toLowerCase().split("").reverse().join("");
